@@ -1,0 +1,62 @@
+[metadata]
+target_versions = ["9C10E0450A6EECA417E036E3CDE7474FED1F0A92AAB018446D156944DEA91435"]
+
+# Snapshot the active main/subview camera immediately before its scene callback.
+[[hooks]]
+address = 0x0045CC17
+type = "detour"
+function = "ShaderInject_CacheCamera"
+original_bytes = [0x8B, 0x4E, 0x6C, 0x8B, 0x01]
+skip_original_bytes = false
+exclude_from_restore = []
+
+[[hooks.parameters]]
+source = "esi"
+type = "pointer"
+
+# Opaque geometry and shadows are complete; particles and native effects follow.
+[[hooks]]
+address = 0x004518BF
+type = "detour"
+function = "ShaderInject_BeforeParticles"
+original_bytes = [0x8B, 0x06, 0x8B, 0xCE, 0x89, 0x15, 0x9C, 0x92, 0x7B, 0x00]
+skip_original_bytes = false
+exclude_from_restore = []
+
+[[hooks.parameters]]
+source = "esi"
+type = "pointer"
+
+# Complete 3D scene, including particles and native effects, before GUI rendering.
+[[hooks]]
+address = 0x0045CC1F
+type = "detour"
+function = "ShaderInject_FinalScene"
+original_bytes = [0x8B, 0x0D, 0x90, 0xF2, 0x73, 0x00, 0x51]
+skip_original_bytes = false
+exclude_from_restore = []
+
+[[hooks.parameters]]
+source = "esi"
+type = "pointer"
+
+# Generic mesh boundaries used by providers that need per-material policy.
+[[hooks]]
+address = 0x0047786A
+type = "detour"
+function = "ShaderInject_BeginMesh"
+original_bytes = [0x8B, 0x4E, 0x44, 0x8B, 0xF8]
+skip_original_bytes = false
+exclude_from_restore = []
+
+[[hooks.parameters]]
+source = "esi"
+type = "pointer"
+
+[[hooks]]
+address = 0x00477B07
+type = "detour"
+function = "ShaderInject_EndMesh"
+original_bytes = [0x8B, 0x06, 0x8B, 0xCE, 0xFF, 0x90, 0x8C, 0x00, 0x00, 0x00]
+skip_original_bytes = false
+exclude_from_restore = []

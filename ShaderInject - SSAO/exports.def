@@ -1,0 +1,4 @@
+LIBRARY ShaderInjectSSAO
+EXPORTS
+    KPatch_Initialize
+

@@ -1,0 +1,2 @@
+# ShaderInject loads as a DLL-only shader-replacement runtime on versions that
+# do not yet have version-specific engine render hooks.

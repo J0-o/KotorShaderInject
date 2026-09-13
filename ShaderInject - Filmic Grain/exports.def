@@ -1,0 +1,3 @@
+LIBRARY ShaderInjectFilmicGrain
+EXPORTS
+    KPatch_Initialize

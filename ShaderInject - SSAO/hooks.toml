@@ -1,0 +1,2 @@
+# DLL-only provider patch. ShaderInject owns all engine render hooks.
+

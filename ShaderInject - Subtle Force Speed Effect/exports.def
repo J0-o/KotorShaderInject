@@ -1,0 +1,3 @@
+LIBRARY ShaderInjectSubtleForceSpeedEffect
+EXPORTS
+    KPatch_Initialize

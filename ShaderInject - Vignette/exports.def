@@ -1,0 +1,3 @@
+LIBRARY ShaderInjectVignette
+EXPORTS
+    KPatch_Initialize

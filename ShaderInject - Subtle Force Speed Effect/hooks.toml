@@ -1,0 +1,1 @@
+# DLL-only replacement provider. ShaderInject owns the OpenGL hook.

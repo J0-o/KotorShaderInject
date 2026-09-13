@@ -1,0 +1,15 @@
+LIBRARY ShaderInject
+EXPORTS
+    ShaderInject_RegisterProvider
+    ShaderInject_RegisterReplacementProvider
+    ShaderInject_ApplyFullscreenEffect
+    ShaderInject_BeginDepthWriteSuppression
+    ShaderInject_EndDepthWriteSuppression
+    ShaderInject_CacheCamera
+    ShaderInject_CacheCameraKotor2
+    ShaderInject_BeforeParticles
+    ShaderInject_FinalScene
+    ShaderInject_FinalSceneCached
+    ShaderInject_BeginMesh
+    ShaderInject_BeginMeshIndirect
+    ShaderInject_EndMesh

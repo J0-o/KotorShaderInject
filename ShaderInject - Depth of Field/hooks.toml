@@ -1,0 +1,2 @@
+# DLL-only provider patch. ShaderInject owns the final-scene engine hook.
+

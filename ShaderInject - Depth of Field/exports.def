@@ -1,0 +1,4 @@
+LIBRARY ShaderInjectDepthOfField
+EXPORTS
+    KPatch_Initialize
+
